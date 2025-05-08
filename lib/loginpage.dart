@@ -1,4 +1,4 @@
-import 'package:flashcards/homepage.dart';  // Import HomePage
+import 'package:flashcards/homepage.dart';
 import 'package:flashcards/signuppage.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -13,7 +13,6 @@ class _LoginScreenState extends State<LoginScreen> {
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
 
-  // Sign in with Email and Password
   Future<void> _signInWithEmailPassword() async {
     try {
       await FirebaseAuth.instance.signInWithEmailAndPassword(
@@ -30,7 +29,6 @@ class _LoginScreenState extends State<LoginScreen> {
     }
   }
 
-  // Sign in with Google
   Future<void> _signInWithGoogle() async {
     try {
       final GoogleSignInAccount? googleUser = await GoogleSignIn().signIn();

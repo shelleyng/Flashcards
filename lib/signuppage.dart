@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:firebase_auth/firebase_auth.dart';
+import 'homepage.dart';
 import 'loginpage.dart';
 
 class SignUpScreen extends StatefulWidget {
@@ -18,12 +19,20 @@ class _SignUpScreenState extends State<SignUpScreen> {
         await FirebaseAuth.instance.createUserWithEmailAndPassword(
           email: _emailController.text,
           password: _passwordController.text,
+
+        );
+        Navigator.pushReplacement(
+          context,
+          MaterialPageRoute(builder: (context) => HomePage()),
         );
       } catch (e) {
         print("Error: $e");
       }
-    } else {
+    }
+
+     else {
       print('Passwords do not match');
+
     }
   }
 
