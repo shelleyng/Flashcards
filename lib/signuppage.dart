@@ -21,7 +21,7 @@ class _SignUpScreenState extends State<SignUpScreen> {
           password: _passwordController.text,
 
         );
-        Navigator.pushReplacement(
+        Navigator.pop(
           context,
           MaterialPageRoute(builder: (context) => HomePage()),
         );

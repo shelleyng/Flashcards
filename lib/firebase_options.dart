@@ -53,6 +53,7 @@ class DefaultFirebaseOptions {
     projectId: 'flashcards-f5dbb',
     authDomain: 'flashcards-f5dbb.firebaseapp.com',
     storageBucket: 'flashcards-f5dbb.firebasestorage.app',
+    databaseURL: 'https://flashcards-f5dbb-default-rtdb.firebaseio.com/',
     measurementId: 'G-KQ1M3Z3M0F',
   );
 
